@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { colors } from "../../utils";
 
 const { PRIMARY_COLOR, SECONDARY_COLOR } = colors;
 
-export default function weatherInfo({ currentWeather }) {
+export default function WeatherInfo({ currentWeather }) {
   const {
     main: { temp },
     weather: [details],

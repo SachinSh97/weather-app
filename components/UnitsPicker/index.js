@@ -2,12 +2,12 @@ import React from "react";
 import { View, StyleSheet, Platform } from "react-native";
 import { Picker } from "@react-native-community/picker";
 
-export default function UnitsPicker({ unitSystem, setUnitSystem }) {
+export default function UnitsPicker({ unitsSystem, setUnitsSystem }) {
   return (
-    <View>
+    <View style={styles.unitsSystem}>
       <Picker
-        selectedValue={unitSystem}
-        onValueChange={(item) => setUnitSystem(item)}
+        selectedValue={unitsSystem}
+        onValueChange={(item) => setUnitsSystem(item)}
         mode="dropdown"
         itemStyle={{ fontSize: 12 }}
       >
@@ -17,18 +17,18 @@ export default function UnitsPicker({ unitSystem, setUnitSystem }) {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
-  unitSystem: {
+  unitsSystem: {
     position: "absolute",
     ...Platform.select({
       ios: {
         top: -30,
       },
       android: {
-        top: 20,
+        top: 30,
       },
     }),
+
     left: 20,
     height: 50,
     width: 100,
